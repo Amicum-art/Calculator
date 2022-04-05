@@ -14,9 +14,6 @@ public:
     };
 public slots:
     void slot_universal() noexcept {
-    //Вместо 10 отдельных слотов ради исключения дублирования...
-    //Хотел передавать значение инициирующей кнопки, но не нашел, как.
-    //Зато имя кнопки передается прекрасно.
         int num = sender()->objectName().toStdString()[3];
         if (lineEdit->text() != "0" && !new_value
                 && (lineEdit->text()[0] >= "0" && lineEdit->text()[0] <= "9" || lineEdit->text()[0] == "-")){
